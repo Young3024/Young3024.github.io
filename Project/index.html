@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Your Name - Personal Website</title>
+    </head>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            
+        }
+
+        header {
+            position:sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            padding: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .nav-title {
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li {
+            position: relative;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links li.active a,
+        .nav-links a:hover {
+            font-size: 22px;
+        }
+
+        .nav-links li.active a {
+            color: orange;
+        }
+        
+        @media screen and (max-width: 390px) {
+            .nav-links a {
+                font-size: 10px;
+            }
+            .nav-links li.active a{
+                color: orange;
+                font-size: 15px;
+            }
+        }  
+
+        .container{
+
+            padding:5px;
+            position:relative;
+            display: grid;
+            gap: 5px;
+            width: 100%;
+            grid-template-areas: 
+                "header header header"
+                "left main right"
+            ;  
+        }
+
+        .rectangle{
+            border: thin solid black;
+            background-color: lightpink;
+            font-family: 'Times New Roman', sans-serif;
+            
+        }
+
+        .headerClass{
+            top:1000;
+            grid-area: header;
+            height:100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .left{
+            grid-area: left;
+            
+        }
+        .main{
+            grid-area: main;
+            
+        }
+        .right{
+            grid-area: right;
+            
+        }
+        
+
+    </style>
+    <body>
+
+        <header>
+            <nav class="navbar">
+                <div class="nav-title">Yiyang Cao</div>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li class = "active"><a href="./index.html">Projects</a></li>
+                    <li><a href="../Contact/">Contact</a></li>
+                    <li><a href="../Personal/">Personal</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class = "container">
+            <div class = "rectangle headerClass">
+                <h1>
+                    Main Projects
+                </h1>
+            </div>
+            <div class = "rectangle left">
+                <h2>
+                    Pac-Man Game(C++)
+                </h2>
+                <ul>
+                    <li>
+                        <h3>
+                            Used the Model View Controller(MVC) pattern and Inheritance and Polymorphism in C++ to design the game.
+                        </h3>
+                    </li>
+                    <li>
+                        <h3>
+                            Utilized the Curses Library in C++ to implement the cursor mode of the game. Also implemented a print mode for the game
+that doesn’t rely on Curses Library. It displays the game board on the terminal and awaits the user’s input for the next move
+                        </h3>
+                    </li>
+                    <li>
+                        <h3>
+                            Built the game board from a given 2D Array that includes limits for height and width and adjusted the size for the two modes
+                        </h3>
+                    </li>
+                </ul>
+
+            </div>
+            <div class = "rectangle main">
+                <h2>
+                    File System (Linux and C)
+                </h2>
+                <ul>
+                    <li>
+                        <h3>
+                            Implemented an entire FAT-based file system software stack which supports up to 128 files in a single root directory                        
+                        </h3>
+                    </li>
+                    <li>
+                        <h3>
+                            Used a simple binary file to emulate a formatted partition in software without using low-level access to an actual storage device
+                        </h3>
+                    </li>
+                    <li>
+                        <h3>
+                            Fulfilled functions including mounting and unmounting a partition, reading and writing files, and creating and removing files
+                        </h3>
+                    </li>
+
+                </ul>
+            </div>
+            <div class = "rectangle right">
+                <h2>
+                    Walk Warrior: Android Mobile Game App (Java, C#, and Unity )
+                </h2>
+                <ul>
+                    <li>
+                        <h3>
+                            Used Unity and C# to create the 2D-model for the main game scene including a main character, barriers, and collectables 
+                        </h3>
+                    </li>
+                    <li>
+                        <h3>
+                            Implemented a battle scene to fight with the monster. Used a Box Collider to switch between the main and the battle scene
+                        </h3>
+                    </li>
+                    <li>
+                        <h3>
+                            Utilized the step sensor in Android to count the number of steps the user has took in the real world.
+                        </h3>
+                    </li>
+                    <li>
+                        <h3>
+                            Counted steps as currency in the game world for the main character to upgrade itself and buy armors to beat the monsters
+                        </h3>
+                    </li>
+            </div>
+            
+        </div>
+
+    </body>
+</html>

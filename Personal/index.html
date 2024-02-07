@@ -61,23 +61,35 @@
         }
 
         .nav-links li.active a{
-            color: red;
+            color: darkseagreen;
         }
 
-        p{
-            font-family: 'Times New Roman', sans-serif;
-            font-size: large;
-            padding-left: 50px;
-        }
         @media screen and (max-width: 390px) {
             .nav-links a {
                 font-size: 10px;
             }
             .nav-links li.active a{
-                color: red;
+                color: darkseagreen;
                 font-size: 15px;
             }
         }  
+        .pic{
+            width: 400px;
+            height: 250px;
+            margin: 20px;
+            border: 2px solid #34495e;
+            transition: border-color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        span{
+            font-size: 100px;
+            color: gold;
+            font-family: 'Times New Roman', sans-serif;
+        }
+        #yellow{
+            color:blue;
+        }
 
     </style>
     <body>
@@ -86,24 +98,21 @@
             <nav class="navbar">
                 <div class="nav-title">Yiyang Cao</div>
                 <ul class="nav-links">
-                    <li class = "active"><a href="./index.html">Home</a></li>
-                    <li><a href="./Project/">Projects</a></li>
-                    <li><a href="./Contact/">Contact</a></li>
-                    <li><a href="./Personal/">Personal</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../Project/">Projects</a></li>
+                    <li><a href="../Contact/">Contact</a></li>
+                    <li  class = "active"><a href="./index.html">Personal</a></li>
                 </ul>
             </nav>
         </header>
-        <p>
-            Hello, my name is Yiyang Cao. In Chinese it is "曹易扬"！！
-        </p>
-        <p>
-            I graduated from the University of California, Davis for my undergraduate studies.
-        </p>
-        <p>
-            Currently, I am pursuing a master's degree at Northeastern University.
-        </p>
-        
 
+        <div class = "pic">
+            <img src="https://imengine.prod.srp.navigacloud.com/?uuid=339aa014-0c92-50d4-b241-312f0c941fec&type=primary&q=72&width=1024" alt="Image 1">
+            <span>Let's go
+                <span id = "yellow">Dubs!!</span>
+            </span>
+        </div>
+        
 
     </body>
 </html>
